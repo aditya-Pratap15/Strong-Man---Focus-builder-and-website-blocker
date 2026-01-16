@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strong Man - Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🛡️ Strong Man</h1>
+      <p class="subtitle">Configure your focus settings</p>
+    </div>
+    
+    <div class="settings-card">
+      <div class="setting-group">
+        <label for="enabled">
+          <input type="checkbox" id="enabled" checked>
+          <span class="label-text">Enable Strong Man</span>
+        </label>
+        <p class="help-text">Turn the extension on or off</p>
+      </div>
+      
+      <div class="setting-group">
+        <label for="timer-duration" class="label-text">Initial Timer Duration</label>
+        <div class="input-group">
+          <input type="number" id="timer-duration" min="10" max="300" value="55">
+          <span class="unit">seconds</span>
+        </div>
+        <p class="help-text">How long you can visit before the warning appears (10-300 seconds)</p>
+      </div>
+      
+      <div class="setting-group">
+        <label for="cooldown-duration" class="label-text">Cooldown Duration</label>
+        <div class="input-group">
+          <input type="number" id="cooldown-duration" min="1" max="60" value="5">
+          <span class="unit">minutes</span>
+        </div>
+        <p class="help-text">How long the site will be paused (1-60 minutes)</p>
+      </div>
+      
+      <div class="setting-group">
+        <label for="personal-message" class="label-text">Personal Message</label>
+        <textarea 
+          id="personal-message" 
+          rows="4" 
+          placeholder="Enter a personal reminder or goal..."></textarea>
+        <p class="help-text">This message will appear on the pause screen to motivate you</p>
+      </div>
+      
+      <div class="button-group">
+        <button id="save-btn" class="primary-btn">Save Settings</button>
+        <button id="reset-btn" class="secondary-btn">Reset to Defaults</button>
+      </div>
+      
+      <div id="save-message" class="save-message hidden">✓ Settings saved successfully</div>
+    </div>
+    
+    <div class="info-card">
+      <h3>📌 How to Enable in Incognito</h3>
+      <ol>
+        <li>Open Chrome and go to <code>chrome://extensions</code></li>
+        <li>Find "Strong Man" in the list</li>
+        <li>Click "Details"</li>
+        <li>Scroll down and enable "Allow in Incognito"</li>
+      </ol>
+    </div>
+    
+    <div class="footer">
+      <p>Building strength through self-control</p>
+    </div>
+  </div>
+  
+  <script src="settings.js"></script>
+</body>
+</html>
